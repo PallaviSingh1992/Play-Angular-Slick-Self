@@ -1,0 +1,24 @@
+@import repository.Interns
+@(dataList:List[Interns])
+@main("List Interns"){
+
+
+<div ng-controller="InternCtrl">
+
+<table>
+    <p>@dataList</p>
+    <tr ng-repeat="intern in @dataList">
+        <input type="text" ng-model="user">
+        <p>{{user}}</p>
+        <td>{{intern.name}}</td>
+
+    </tr>
+</table>
+
+</div>
+
+<script type="text/javascript" src="@routes.Assets.versioned("javascripts/list.js")">
+
+</script>
+
+}
